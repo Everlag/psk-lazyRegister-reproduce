@@ -130,7 +130,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home" tabindex="-1">
               <paper-material elevation="1">
-                <my-greeting></my-greeting>
+                <template is="dom-if" if="[[doesnotexist]]">
+                  <my-greeting></my-greeting>
+                </template>
 
                 <p class="subhead">You now have:</p>
                 <my-list></my-list>
